@@ -1,0 +1,16 @@
+{"at":0,"kind":"node","record":{"node":"x","kind":"origin","capacity":3}}
+{"at":0,"kind":"node","record":{"node":"r","kind":"relay","capacity":2}}
+{"at":0,"kind":"node","record":{"node":"old","kind":"office","capacity":8}}
+{"at":0,"kind":"node","record":{"node":"new","kind":"office","capacity":8}}
+{"at":1,"kind":"route","record":{"revision":1,"edges":[["x","r"],["r","old"]],"offices":{"old":["x"]}}}
+{"at":2,"kind":"report","record":{"origin":"x","device":"x1","observation":"a1","digest":"cc"}}
+{"at":3,"kind":"offer","record":{"envelope":"x1","from":"x","to":"r","observations":["a1"]}}
+{"at":4,"kind":"custody","record":{"envelope":"x1","node":"r","observations":["a1"]}}
+{"at":5,"kind":"offer","record":{"envelope":"x2","from":"r","to":"old","observations":["a1"]}}
+{"at":6,"kind":"route","record":{"revision":2,"edges":[["x","r"],["r","x"]],"offices":{"new":["x"]}}}
+{"at":7,"kind":"inspect","record":{"observation":"a1"}}
+{"at":8,"kind":"archived","record":{"office":"old","observation":"a1","digest":"cc","accepted_at":5}}
+{"at":9,"kind":"deliver_receipt","record":{"node":"r","office":"old","observation":"a1"}}
+{"at":10,"kind":"restart","record":{"node":"r"}}
+{"at":11,"kind":"received","record":{"envelope":"x1","node":"r"}}
+{"at":12,"kind":"inspect","record":{"observation":"a1"}}
